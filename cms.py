@@ -34,7 +34,7 @@ cuss_words = [' badhir ', ' badhirchand ', ' bhakland ', ' bhadva ', ' bhootnika
 #list of found cuss words, gets updated as cuss words are found
 found_cuss_words = []
 
-# check_profanity scans the provided file for any cuss words in the list above, sets flag to True if cuss words are found
+# check_profanity scans the provided file for any cuss words in the list above, returns True if cuss words are found
 def check_profanity(docfile): 
     #check for file type to extract content to check profanity
     f = open(docfile, "rb")
@@ -58,7 +58,8 @@ def check_profanity(docfile):
     return flag
 # prints all found cuss words
 def show_cuss_words():
-    print(found_cuss_words)
+    for cuss in found_cuss_words:
+        print(cuss)
 
 ######################################--End--######################################
 
