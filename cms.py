@@ -11,28 +11,25 @@ import mammoth
 
 ######################################--Profanity related functions--######################################
 # a list of cuss words in hinglish
-cuss_words = ['badhir', 'badhirchand', 'bhakland', 'bhadva', 'bhootnika', 'chinaal', 'chutia', 'ghasti',
-                'chutiya', 'haraami', 'haraam', 'hijra', 'hijda', 'hinjda', 'jaanvar', 'kutta', 'kutiya',
-                'khota', 'auladheen', 'jaat', 'najayaz', 'gandpaidaish', 'saala', 'kutti', 'soover', 'suar',
-                'tatti', 'potty', 'bhenchod', 'bahenchod', 'bahanchod', 'bahencho', 'bancho', 'bahenke',
-                'laude', 'takke', 'betichod', 'bhaichod', 'bhains', 'jhalla', 'jhant', 'nabaal', 'pissu',
-                'kutte', 'maadherchod', 'madarchod', 'padma', 'raand', 'rand', 'jamai', 'randwa', 'randi',
-                'bachachod', 'bachichod', 'soower', 'bachchechod', 'pathe', 'banda', 'booblay', 'booby', 'buble',
-                'babla', 'bhonsriwala', 'bhonsdiwala', 'bhosadiwala', 'ched', 'chut', 'chod', 'chodu', 'chodra',
-                'choochi', 'chuchi', 'gaandu', 'gandu', 'gaand', 'lavda', 'lawda', 'lauda', 'lund', 'balchod',
-                'lavander', 'muth', 'maacho', 'mammey', 'tatte', 'toto', 'bhandwe', 'bhosadchod', 'bhosad', 'bumchod',
-                'bum', 'bur', 'cunt', 'cuntmama', 'chipkali', 'pasine', 'jhaat', 'chodela', 'bhagatchod', 'chhola',
-                'chudai', 'chudaikhana', 'chunni', 'choot', 'bhoot', 'dhakkan', 'bhajiye', 'fateychu', 'gandnatije',
-                'lundtopi', 'gaandu', 'gaandfat', 'gaandmasti', 'makhanchudai', 'gaandmarau', 'gandu', 'chaatu', 'beej',
-                'choosu', 'fakeerchod', 'lundoos', 'shorba', 'binbheja', 'bhadwe', 'parichod', 'nirodh', 'pucchi', 'baajer',
-                'choud', 'bhosda', 'choos', 'maka', 'chinaal', 'gadde', 'joon', 'chullugand', 'doob', 'khatmal',
-                'gandkate', 'bambu', 'lassan', 'danda', 'keera', 'keeda', 'hazaarchu', 'paidaishikeeda', 'kali',
-                'safaid', 'poot', 'behendi', 'chus', 'machudi', 'chodoonga', 'baapchu', 'laltern', 'suhaagchudai', 'raatchuda',
-                'kaalu', 'neech', 'chikna', 'meetha', 'beechka', 'chooche', 'patichod', 'rundi', 'makkhi', 'biwichod',
-                'chodhunga', 'haathi', 'kute', 'jhanten', 'kaat', 'gandi', 'gadha', 'bimaar', 'badboodar', 'dum', 'raandsaala',
-                'phudi', 'chute', 'kussi', 'khandanchod', 'ghussa', 'maarey', 'chipkili', 'unday', 'budh', 'chaarpai', 'chodun',
-                'chatri', 'chode', 'chodho', 'mullekatue', 'mullikatui', 'mullekebaal', 'momedankatue', 'katua', 'chutiyapa', 'bc',
-                'mc', 'chudwaya', 'kutton', 'jungli', 'vahiyaat', 'jihadi', 'atankvadi', 'atankwadi', 'aatanki']
+cuss_words = [' badhir ', ' badhirchand ', ' bhakland ', ' bhadva ', ' bhootnika ', ' chinaal ', ' chutia ', ' ghasti ',
+    ' chutiya ', ' haraami ', ' haraam ', ' hijra ', ' hijda ', ' hinjda ', ' jaanvar ', ' kutta ', ' kutiya ', ' khota ', ' auladheen ',
+    ' jaat ', ' najayaz ', ' gandpaidaish ', ' saala ', ' kutti ', ' soover ', ' suar ', ' tatti ', ' potty ', ' bhenchod ', ' bahenchod ',
+    ' bahanchod ', ' bahencho ', ' bancho ', ' bahenke ', ' laude ', ' takke ', ' betichod ', ' bhaichod ', ' bhains ', ' jhalla ', ' jhant ',
+    ' nabaal ', ' pissu ', ' kutte ', ' maadherchod ', ' madarchod ', ' padma ', ' raand ', ' rand ', ' jamai ', ' randwa ', ' randi ',
+    ' bachachod ', ' bachichod ', ' soower ', ' bachchechod ', ' pathe ', ' banda ', ' booblay ', ' booby ', ' buble ', ' babla ', ' bhonsriwala ',
+    ' bhonsdiwala ', ' bhosadiwala ', ' ched ', ' chut ', ' chod ', ' chodu ', ' chodra ', ' choochi ', ' chuchi ', ' gaandu ',
+    ' gandu ', ' gaand ', ' lavda ', ' lawda ', ' lauda ', ' lund ', ' balchod ', ' lavander ', ' muth ', ' maacho ', ' mammey ', ' tatte ',
+    ' toto ', ' bhandwe ', ' bhosadchod ', ' bhosad ', ' bumchod ', ' bum ', ' bur ', ' cunt ', ' cuntmama ', ' chipkali ', ' pasine ',
+    ' jhaat ', ' chodela ', ' bhagatchod ', ' chhola ', ' chudai ', ' chudaikhana ', ' chunni ', ' choot ', ' bhoot ', ' dhakkan ', ' bhajiye ',
+    ' fateychu ', ' gandnatije ', ' lundtopi ', ' gaandu ', ' gaandfat ', ' gaandmasti ', ' makhanchudai ', ' gaandmarau ', ' gandu ', ' chaatu ',
+    ' beej ', ' choosu ', ' fakeerchod ', ' lundoos ', ' shorba ', ' binbheja ', ' bhadwe ', ' parichod ', ' nirodh ', ' pucchi ', ' baajer ', ' choud ', 
+    ' bhosda ', ' choos ', ' maka ', ' chinaal ', ' gadde ', ' joon ', ' chullugand ', ' doob ', ' khatmal ', ' gandkate ', ' bambu ', ' lassan ', 
+    ' danda ', ' keera ', ' keeda ', ' hazaarchu ', ' paidaishikeeda ', ' kali ', ' safaid ', ' poot ', ' behendi ', ' chus ', ' machudi ', 
+    ' chodoonga ', ' baapchu ', ' laltern ', ' suhaagchudai ', ' raatchuda ', ' kaalu ', ' neech ', ' chikna ', ' meetha ', ' beechka ', ' chooche ', 
+    ' patichod ', ' rundi ', ' makkhi ', ' biwichod ', ' chodhunga ', ' haathi ', ' kute ', ' jhanten ', ' kaat ', ' gandi ', ' gadha ', ' bimaar ', 
+    ' badboodar ', ' dum ', ' raandsaala ', ' phudi ', ' chute ', ' kussi ', ' khandanchod ', ' ghussa ', ' maarey ', ' chipkili ', ' unday ', ' budh ', 
+    ' chaarpai ', ' chodun ', ' chatri ', ' chode ', ' chodho ', ' mullekatue ', ' mullikatui ', ' mullekebaal ', ' momedankatue ', ' katua ', ' chutiyapa ', 
+    ' bc ', ' mc ', ' chudwaya ', ' kutton ', ' jungli ', ' vahiyaat ', ' jihadi ', ' atankvadi ', ' atankwadi ', ' aatanki ']
 
 #list of found cuss words, gets updated as cuss words are found
 found_cuss_words = []
@@ -53,9 +50,9 @@ def check_profanity(docfile):
     
     flag = False
     print(f"{name} contents:\n"+content)
-    for word in cuss_words:
-        if word in content:
-            found_cuss_words.append(word) # appends found cuss words to the found_cuss_words list
+    for cuss in cuss_words:
+        if cuss in content:
+            found_cuss_words.append(cuss) # appends found cuss words to the found_cuss_words list
             flag = True # return True if cuss words found 
         
     return flag
