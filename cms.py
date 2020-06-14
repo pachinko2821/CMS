@@ -6,9 +6,9 @@ provide txt files with name in the format "year-month-day-author-title.txt"
 '''
 
 import os
-#uses mammoth to extract txt from docx/convert docx to html
+# uses mammoth to extract txt from docx/convert docx to html
 import mammoth 
-
+from bs4 import BeautifulSoup as bs
 ######################################--Profanity related functions--######################################
 # a list of cuss words in hinglish
 cuss_words = [' badhir ', ' badhirchand ', ' bhakland ', ' bhadva ', ' bhootnika ', ' chinaal ', ' chutia ', ' ghasti ',
@@ -40,6 +40,8 @@ def check_profanity(docfile):
     f = open(docfile, "rb")
     name, extension = os.path.splitext(docfile)
     if extension == '.txt':
+        f.close()
+        f = open(docfile, "r")
         content = f.read()
     elif extension == '.docx':
         result = mammoth.extract_raw_text(f)
@@ -49,7 +51,7 @@ def check_profanity(docfile):
         exit()
     
     flag = False
-    print(f"{name} contents:\n"+content)
+    print(content)
     for cuss in cuss_words:
         if cuss in content:
             found_cuss_words.append(cuss) # appends found cuss words to the found_cuss_words list
@@ -90,17 +92,33 @@ def txt2html(txtfile, header, footer):
     
     final_content.append("<h4>"+footer+"</h4>\n") # add footer
 
-    with open(f"{title}.html","w+") as html_file: # write html file as title.html
-        html_file.write(f"<!DOCTYPE html>\n<html>\n<head>\n<title>{title}</title>\n</head>\n<body>\n") #add initial syntax and title
+    with open("temp_html","w+") as html_file: # create a temp html file, this is difficult to read
+        html_file.write(f"<!DOCTYPE html><html><head>\n<title>{title}</title></head><body>") #add initial syntax and title
         
-        html_file.write(f"<span>\nAuthor: {author}\nDate: {day}/{month}/{year}\n</span>\n") # add author and date
+        html_file.write(f"<span>Author: {author}\nDate: {day}/{month}/{year}</span>") # add author and date
         
         for group in final_content:
             html_file.write(group) # add article content
 
         html_file.write("</html>")
-    print(f"File converted and saved as {title}.html!")
+    
     html_file.close()
+        
+    # beautify temp file contents and create actual temp file
+    with open("temp_html", "r") as html_file:
+        with open(f"{title}.html", "w+") as pretty_html_file:    
+            content = html_file.read()
+            soup = bs(content, 'html.parser')
+            content = soup.prettify()
+            pretty_html_file.write(content)
+
+        pretty_html_file.close()
+    
+    html_file.close()
+
+    os.remove("temp_html") # delete temp file
+    print(f"File converted and saved as {title}.html!")
+    
 
 
 
@@ -122,13 +140,27 @@ def docx2html(docxfile, header, footer):
 
     title = title.strip(".docx")
 
-    with open(f"{title}.html", "w+") as html_file:
-        html_file.write(f"<!DOCTYPE html>\n<html>\n<head>\n<title>{title}</title>\n</head>\n<body>\n") #add initial syntax and title
+    #create a temp file, its gonna be difficult to read
+    with open("temp_html", "w+") as html_file:
+        html_file.write(f"<!DOCTYPE html><html><head><title>{title}</title></head><body>") #add initial syntax and title
         
-        html_file.write(f"<span>\nAuthor: {author}\nDate: {day}/{month}/{year}\n</span>\n") # add author and date
+        html_file.write(f"<span>Author: {author}Date: {day}/{month}/{year}</span>") # add author and date
         
-        html_file.write(html+"\n</html>")
+        html_file.write(html+"</html>")
+    html_file.close()
 
+    #beautify the temp file and create the actual html document
+    with open("temp_html", "r") as html_file:
+        with open(f"{title}.html", "w+") as pretty_html_file:    
+            content = html_file.read()
+            soup = bs(content, 'html.parser')
+            content = soup.prettify()
+            pretty_html_file.write(content)
+
+        pretty_html_file.close()
+
+    #delete the temp file
+    os.remove("temp_html")
     print(f"File converted and saved as {title}.html!")
     html_file.close()
 

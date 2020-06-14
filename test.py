@@ -13,7 +13,7 @@ if profanity == False:
     #for text file
     txt2html(whateverFile, "This is a Header", "This is a Footer") # converts txt to html if no cuss words found 
     #for docx file
-    docx2html(whateverFile, "This is a Header", "This is a Footer") # converts docx to html if no cuss words found 
+    #docx2html(whateverFile, "This is a Header", "This is a Footer") # converts docx to html if no cuss words found 
 
 else:
     print("contains inappropriate words!")
