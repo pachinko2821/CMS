@@ -10,17 +10,11 @@ profanity = check_profanity(whateverFile) # check txt file for cuss words, retur
 
 
 if profanity == False:
+    #for text file
     txt2html(whateverFile, "This is a Header", "This is a Footer") # converts txt to html if no cuss words found 
+    #for docx file
+    docx2html(whateverFile, "This is a Header", "This is a Footer") # converts docx to html if no cuss words found 
+
 else:
     print("contains inappropriate words!")
     show_cuss_words() # shows all found cuss words 
-
-
-'''
-with open(whateverFile) as f:
-    content = f.read()
-    profanity = check_profanity(content)
-    print(profanity)
-docx2html(whateverFile, "This is a Header", "This is a Footer") # converts docx to html if no cuss words found 
-'''
-
