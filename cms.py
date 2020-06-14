@@ -6,7 +6,7 @@ provide txt files with name in the format "year-month-day-author-title.txt"
 '''
 
 import os
-#uses mammoth to convert docx to html
+#uses mammoth to extract txt from docx/convert docx to html
 import mammoth 
 
 ######################################--Profanity related functions--######################################
@@ -38,11 +38,23 @@ cuss_words = ['badhir', 'badhirchand', 'bhakland', 'bhadva', 'bhootnika', 'china
 found_cuss_words = []
 
 # check_profanity scans the provided file for any cuss words in the list above, sets flag to True if cuss words are found
-def check_profanity(data): # data is the contents of the txt file
+def check_profanity(docfile): 
+    #check for file type to extract content to check profanity
+    f = open(docfile, "rb")
+    name, extension = os.path.splitext(docfile)
+    if extension == '.txt':
+        content = f.read()
+    elif extension == '.docx':
+        result = mammoth.extract_raw_text(f)
+        content = result.value
+    else:
+        print("Unknown File format!\n")
+        exit()
+    
     flag = False
-    print(data)
+    print(f"{name} contents:\n"+content)
     for word in cuss_words:
-        if word in data:
+        if word in content:
             found_cuss_words.append(word) # appends found cuss words to the found_cuss_words list
             flag = True # return True if cuss words found 
         
