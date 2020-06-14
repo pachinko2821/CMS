@@ -1,2 +1,2 @@
 # CMS
-A Python based CMS
+A Python based CMS :D
