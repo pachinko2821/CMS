@@ -5,10 +5,10 @@
     setcookie($username, "7355608");
     
     if(empty($username)){
-        header("Location: admin-login.php");
+        header("Location: cmsadmin/admin-login.php");
     }
     elseif(!isset($_COOKIE)){
-        header("Location: admin-login.php");
+        header("Location: cmsadmin/admin-login.php");
     }
 
 

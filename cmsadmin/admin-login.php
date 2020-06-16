@@ -61,7 +61,7 @@ if(empty($result->fetchArray(SQLITE3_ASSOC))){
 else{
     session_start();
     $_SESSION['user'] = $username;
-    header("Location: dashboard.php");
+    header("Location: cmsadmin/dashboard.php");
     }
 }
 
