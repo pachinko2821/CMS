@@ -48,7 +48,7 @@
 $username= $_POST['user'];
 $password= hash("sha256", $_POST['pass']);
 
-$statement = $db->prepare('SELECT * FROM users WHERE username=? AND password=?');
+$statement = $db->prepare('SELECT * FROM admins WHERE username=? AND password=?');
 $statement->bindValue(1, $username);
 $statement->bindValue(2, $password);
 $result = $statement->execute();

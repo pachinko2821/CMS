@@ -4,7 +4,7 @@ import sqlite3
 import sys
 from cms import check_profanity, txt2html, show_cuss_words, docx2html
 
-connect = sqlite3.connect("webpage/includes/cms.db")
+connect = sqlite3.connect("cmsadmin/includes/cms.db")
 cursor = connect.cursor()
 
 whateverFile = sys.argv[1] # take txt file as argument    
