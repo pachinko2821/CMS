@@ -1,4 +1,4 @@
-# CMS
+# CMS FOR COLLEGE BLOGS (?)
 A Python-php-sqlite based CMS:
 
 1. Can convert txt/docx to HTML with custom header/footer
