@@ -1,5 +1,5 @@
 <?php
-    include '/includes/php/connect.php';
+    require '../includes/php/connect.php';
 ?>
 
 <html>

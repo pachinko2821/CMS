@@ -1,7 +1,10 @@
 <?php
-    $db = new SQLite3('cms.db');
+    $db = new SQLite3('CMS.db');
 
     if(!$db){
         echo $db->lastErrorCode();
+    }
+    else{
+        echo "Connected";
     }
 ?>
