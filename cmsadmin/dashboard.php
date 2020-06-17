@@ -111,14 +111,17 @@
         <h5>Recently Submitted Posts(Red if we found profane words):</h5>
         <div class="row">
 
-        <?php
+        
+        <!-- shows all recently submitted posts, for review by admin, footers is red if said post contains profane words, else green -->
+        
+          <?php
             
-            $statement = $db->prepare('SELECT * FROM "postDetails"');
+            $statement = $db->prepare('SELECT * FROM postDetails');
             $result = $statement->execute();
             while($row = $result->fetchArray()){ ?>  
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400"></a>
                         <div class="card-body">
                             <h4 class="card-title">
                             <a href="<?php echo $row['Profanity']."-posts/".$row['Title']; ?>.html"><?php echo $row['Title']; ?></a>
@@ -131,8 +134,8 @@
                             
                         </div>
                         </div>
-                    </div>'
-                   <?php } ?>
+                    </div>
+            <?php } ?>
 
         </div>
         <!-- /.row -->
