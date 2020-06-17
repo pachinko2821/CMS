@@ -1,5 +1,5 @@
 <?php
-    include 'includes/php/connect.php';
+    include '/includes/php/connect.php';
     session_start();
     $username = $_SESSION['user'];
     setcookie($username, "7355608");
@@ -27,10 +27,10 @@
     <meta name="author" content="">
 
     <!-- Bootstrap core CSS -->
-    <link href="includes/css/dashboard.css" rel="stylesheet">
+    <link href="/includes/css/dashboard.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="includes/css/dashboard-homepage.css" rel="stylesheet">
+    <link href="/includes/css/dashboard-homepage.css" rel="stylesheet">
 </head>
 
 <body>
@@ -155,8 +155,8 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="includes/js/jquery.min.js"></script>
-  <script src="includes/js/dashboard.min.js"></script>
+  <script src="/includes/js/jquery.min.js"></script>
+  <script src="/includes/js/dashboard.min.js"></script>
 
     </body>
 </html>
