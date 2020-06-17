@@ -106,7 +106,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>
+        </div>  
 
         <h5>Recently Submitted Posts(Red if we found profane words):</h5>
         <div class="row">

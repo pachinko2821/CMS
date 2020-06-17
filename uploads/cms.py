@@ -12,6 +12,7 @@ import datetime
 #BeautifulSoup to prettify the html doc
 from bs4 import BeautifulSoup as bs
 import sqlite3
+import sys
 
 ######################################--Profanity related functions--######################################
 # a list of cuss words in hinglish
@@ -186,7 +187,7 @@ def updatedb(whateverFile): #takes file as an argument
     Date, Author, Title, small_content = fdetails[0], fdetails[1], fdetails[2], fdetails[3] #gets file details to add into database
 
     #uncomment below line for text files
-    txt2html(whateverFile, "This is a Header", "This is a Footer") # converts txt to html
+    #txt2html(whateverFile, "This is a Header", "This is a Footer") # converts txt to html
     #uncomment below line for docx files
     #docx2html(whateverFile, "This is a Header", "This is a Footer") # converts docx to html if no cuss words found 
 
@@ -208,6 +209,6 @@ def fileMove():
 
 ######################################--End--######################################
 
-updatedb("2020-6-14-Pachinko-csgo.txt")
-updatedb("2020-6-16-RudePhilosopher-RainbowSixSiege.txt")
+whateverFile = sys.argv[1]
+updatedb(whateverFile)
 fileMove()
