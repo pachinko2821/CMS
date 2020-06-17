@@ -1,5 +1,5 @@
 <?php
-    include '/includes/php/connect.php';
+    include '../includes/php/connect.php';
     session_start();
     $username = $_SESSION['user'];
     setcookie($username, "7355608");
@@ -72,7 +72,7 @@
         <h1 class="my-4">CMS ADMIN</h1>
         <div class="list-group">
           <a href="dashboard.php" class="list-group-item">Submits</a>
-          <a href="#settings.php" class="list-group-item">Account Settings</a>
+          <a href="change-password.php" class="list-group-item">Change admin password</a>
           <a href="dashboard.php" class="list-group-item">Graphs</a>
         </div>
 

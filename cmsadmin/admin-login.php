@@ -1,5 +1,5 @@
 <?php
-    require '../includes/php/connect.php';
+    include '../includes/php/connect.php';
 ?>
 
 <html>
@@ -54,7 +54,6 @@
 
 <?php
 
-
 $username= $_POST['user'];
 $password= hash("sha256", $_POST['pass']);
 
@@ -63,16 +62,13 @@ $statement->bindValue(1, $username);
 $statement->bindValue(2, $password);
 $result = $statement->execute();
 
-if(!empty($username)){
 if(empty($result->fetchArray(SQLITE3_ASSOC))){
     echo "<script>alert('Invalid Credentials')</script>";
     }
-
 else{
     session_start();
     $_SESSION['user'] = $username;
     header("Location: dashboard.php");
     }
-}
 
 ?>
