@@ -73,6 +73,7 @@
         <div class="list-group">
           <a href="dashboard.php" class="list-group-item">Submits</a>
           <a href="#settings.php" class="list-group-item">Account Settings</a>
+          <a href="dashboard.php" class="list-group-item">Graphs</a>
         </div>
 
       </div>
