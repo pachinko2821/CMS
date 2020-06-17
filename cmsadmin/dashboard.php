@@ -52,9 +52,6 @@
             <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
           <li class="nav-item">
@@ -74,9 +71,8 @@
 
         <h1 class="my-4">CMS ADMIN</h1>
         <div class="list-group">
-          <a href="#" class="list-group-item">Category 1</a>
-          <a href="#" class="list-group-item">Category 2</a>
-          <a href="#" class="list-group-item">Category 3</a>
+          <a href="dashboard.php" class="list-group-item">Submits</a>
+          <a href="#settings.php" class="list-group-item">Account Settings</a>
         </div>
 
       </div>
@@ -92,13 +88,13 @@
           </ol>
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+              <img class="d-block img-fluid" src="https://www.mgmmumbai.ac.in/mgmcet/sites/default/files/inline-images/accellors.jpg" alt="First slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+              <img class="d-block img-fluid" src="https://www.mgmmumbai.ac.in/mgmcet/sites/default/files/inline-images/marathi-day-3.JPG" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+              <img class="d-block img-fluid" src="https://www.mgmmumbai.ac.in/mgmcet/sites/default/files/inline-images/marathi-day-1.JPG" alt="Third slide">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
