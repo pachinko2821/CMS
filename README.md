@@ -8,3 +8,4 @@ To-Do:
 
 1. Take Admin approval for posts
 2. Add main blog page
+3. fix change-password.php
