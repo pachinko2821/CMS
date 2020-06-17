@@ -1,10 +1,10 @@
 <?php
-    include 'includes/connect.php';
+    include 'includes/php/connect.php';
 ?>
 
 <html>
         <head>
-            <link rel="stylesheet" type="text/css" href='includes/main.css'>
+            <link rel="stylesheet" type="text/css" href='includes/css/main.css'>
             <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
             <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
             <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -39,6 +39,16 @@
             </div>
             </div>
         </body>
+
+<!-- 
+       ,~~.
+      (  6 )-_, quack?
+ (\___ )=='-'
+  \ .   ) )
+   \ `-' /    
+~'`~'`~'`~'`~ 
+ -->
+
 
 </html>
 

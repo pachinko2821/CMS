@@ -1,5 +1,5 @@
 <?php
-    include 'includes/connect.php';
+    include 'includes/php/connect.php';
     session_start();
     $username = $_SESSION['user'];
     setcookie($username, "7355608");
@@ -27,10 +27,10 @@
     <meta name="author" content="">
 
     <!-- Bootstrap core CSS -->
-    <link href="includes/dashboard.css" rel="stylesheet">
+    <link href="includes/css/dashboard.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="includes/dashboard-homepage.css" rel="stylesheet">
+    <link href="includes/css/dashboard-homepage.css" rel="stylesheet">
 </head>
 
 <body>
@@ -111,7 +111,7 @@
           </a>
         </div>
 
-        <h3>Recently Submitted Posts:</h3>
+        <h5>Recently Submitted Posts(Red if we found profane words):</h5>
         <div class="row">
 
         <?php
@@ -124,7 +124,7 @@
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                            <a href="<?php echo $row['Title']; ?>.html"><?php echo $row['Title']; ?></a>
+                            <a href="<?php echo $row['Profanity']."-posts/".$row['Title']; ?>.html"><?php echo $row['Title']; ?></a>
                             </h4>
                             <h5><?php echo $row['Author']; ?></h5>
                             <h6><?php echo $row['Date']; ?></h6>
@@ -152,14 +152,24 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+      <p class="m-0 text-center text-white">cmsadmin 2020</p>
     </div>
     <!-- /.container -->
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="includes/jquery.min.js"></script>
-  <script src="includes/dashboard.min.js"></script>
+  <script src="includes/js/jquery.min.js"></script>
+  <script src="includes/js/dashboard.min.js"></script>
 
     </body>
 </html>
+
+<!-- 
+       ,~~.
+      (  6 )-_, quack?
+ (\___ )=='-'
+  \ .   ) )
+   \ `-' /    
+~'`~'`~'`~'`~ 
+
+-->
