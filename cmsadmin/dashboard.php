@@ -124,7 +124,7 @@
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400"></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                            <a href="<?php echo $row['Profanity']."-posts/".$row['Title']; ?>.html"><?php echo $row['Title']; ?></a>
+                            <a href="approval.php?file=<?php echo $row['Profanity'].'-posts/'.$row['Title']; ?>.html"><?php echo $row['Title']; ?></a>
                             </h4>
                             <h5><?php echo $row['Author']; ?></h5>
                             <h6><?php echo $row['Date']; ?></h6>

@@ -180,14 +180,14 @@ def docx2html(docxfile, header, footer):
 # updatedb fucntion performs all the functions or checking profanity, updating the database
 def updatedb(whateverFile): #takes file as an argument
     
-    connect = sqlite3.connect("../cmsadmin/cms.db")
+    connect = sqlite3.connect("../includes/php/CMS.db")
     cursor = connect.cursor()
 
     profanity, fdetails = check_profanity(whateverFile) # check txt file for cuss words, returns True if cuss words found and file details regardless
     Date, Author, Title, small_content = fdetails[0], fdetails[1], fdetails[2], fdetails[3] #gets file details to add into database
 
     #uncomment below line for text files
-    #txt2html(whateverFile, "This is a Header", "This is a Footer") # converts txt to html
+    txt2html(whateverFile, "This is a Header", "This is a Footer") # converts txt to html
     #uncomment below line for docx files
     #docx2html(whateverFile, "This is a Header", "This is a Footer") # converts docx to html if no cuss words found 
 
@@ -198,7 +198,7 @@ def updatedb(whateverFile): #takes file as an argument
 
 #fileMove moves the files for review/approval at admin panel 
 def fileMove():
-    connect = sqlite3.connect("../cmsadmin/cms.db")
+    connect = sqlite3.connect("../includes/php/CMS.db")
     cursor = connect.cursor()
     cursor.execute("SELECT Title, Profanity FROM postDetails")
     result = cursor.fetchall()
