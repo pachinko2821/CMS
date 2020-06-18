@@ -37,15 +37,15 @@
 
                 <label>Current Password</label>
                     <div class="form-group pass_show"> 
-                        <input type="password" id="password" class="fadeIn first" name="pass" placeholder="old-pass"> 
+                        <input type="password" id="password" class="fadeIn first" name="old-pass"> 
                     </div> 
                 <label>New Password</label>
                     <div class="form-group pass_show"> 
-                        <input type="password" id="password" class="fadeIn second" name="pass" placeholder="new-pass"> 
+                        <input type="password" id="password" class="fadeIn second" name="new-pass"> 
                     </div> 
                 <label>Confirm Password</label>
                     <div class="form-group pass_show"> 
-                        <input type="password" id="password" class="fadeIn third" name="pass" placeholder="confirm-new-pass"> 
+                        <input type="password" id="password" class="fadeIn third" name="confirm-new-pass"> 
                     </div>
                     <input type="submit" class="fadeIn fourth" value="Change Password" name="sumbit-btn">
                 </div>
@@ -71,7 +71,7 @@ if($old_pass == $row['password']){
 
         $statement = $db->prepare('UPDATE admins set password=? WHERE password=?;');
         $statement->bindValue(1, $new_pass);
-        $statement->bindValue(1, $old_pass);
+        $statement->bindValue(2, $old_pass);
         $result = $statement->execute();
 
         echo "<script>alert('Password Updated!')</script>";
