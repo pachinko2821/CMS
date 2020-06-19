@@ -1,7 +1,7 @@
 <?php
     include '../includes/php/connect.php';
     session_start();
-    $username = $_SESSION['usser'];
+    $username = $_SESSION['user'];
     if(!isset($_COOKIE[$username])){
         header("Location: admin-login.php");
     }
@@ -61,6 +61,7 @@ $statement->bindValue(1, $old_pass);
 $result = $statement->execute();
 
 $row = $result->fetchArray(SQLITE3_ASSOC);
+
 if(!empty($old_pass) && !empty($new_pass) && !empty($c_new_pass)){
 if($old_pass == $row['password']){
     if($new_pass == $c_new_pass){
