@@ -92,16 +92,16 @@ def txt2html(txtfile, header, footer):
 
     content = text.read()
     #add css links
-    links = '<meta charset="utf-8">'
+        links = '<meta charset="utf-8">'
     links += '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'
     links += '<meta name="description" content="">'
     links += '<meta name="author" content="">'
     links += f'<title>{title}</title>'
-    links += '<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
-    links += '<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">'
+    links += '<link href="/includes/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
+    links += '<link href="/includes/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">'
     links += "<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>"
     links += "<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>"
-    links += '<link href="css/clean-blog.min.css" rel="stylesheet">'
+    links += '<link href="/includes/css/clean-blog.min.css" rel="stylesheet">'
 
 
     final_content = [] # this list will contain the contents to be added to the html file
