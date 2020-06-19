@@ -76,7 +76,7 @@ include '../includes/php/connect.php';
   
   
 <?php  
-$statement = $db->prepare('SELECT * FROM approvedPosts;');
+$statement = $db->prepare("SELECT * FROM approvedPosts;");
 $result = $statement->execute();
 ?>
   <div class="container">
@@ -87,7 +87,7 @@ $result = $statement->execute();
         <div class="post-preview">
           <a href="post.html">
             <h2 class="post-title">
-              <a href="posts/<?php $row['Title'];?>.html"><?php echo $row['Title'];?></a>
+              <a href="/blog/posts/<?php $row['Title']; ?>.html"><?php echo $row['Title'];?></a>
             </h2>
             <h3 class="post-subtitle">
               <?php echo $row['small_content']; ?>
