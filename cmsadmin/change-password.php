@@ -61,6 +61,7 @@ $statement->bindValue(1, $old_pass);
 $result = $statement->execute();
 
 $row = $result->fetchArray(SQLITE3_ASSOC);
+if(!empty($old_pass) && !empty($new_pass) && !empty($c_new_pass)){
 if($old_pass == $row['password']){
     if($new_pass == $c_new_pass){
 
@@ -81,4 +82,5 @@ if($old_pass == $row['password']){
         echo "<script>alert('Wrong Current Password!')</script>";
     }
 
+}
 ?>
