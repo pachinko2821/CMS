@@ -91,6 +91,17 @@ def txt2html(txtfile, header, footer):
     title = title.strip(".txt") # remove '.txt' from title
 
     content = text.read()
+    #add css links
+    links = '<meta charset="utf-8">'
+    links += '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'
+    links += '<meta name="description" content="">'
+    links += '<meta name="author" content="">'
+    links += f'<title>{title}</title>'
+    links += '<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
+    links += '<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">'
+    links += "<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>"
+    links += "<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>"
+    links += '<link href="css/clean-blog.min.css" rel="stylesheet">'
 
 
     final_content = [] # this list will contain the contents to be added to the html file
@@ -103,7 +114,7 @@ def txt2html(txtfile, header, footer):
     final_content.append("<h4>"+footer+"</h4>\n") # add footer
 
     with open("temp_html","w+") as html_file: # create a temp html file, this is difficult to read
-        html_file.write(f"<!DOCTYPE html><html><head>\n<title>{title}</title></head><body>") #add initial syntax and title
+        html_file.write(f"<!DOCTYPE html><html><head>{links}</head><body>") #add initial syntax and title
         
         html_file.write(f"<span>Author: {author}\nDate: {day}/{month}/{year}</span>") # add author and date
         
@@ -148,10 +159,22 @@ def docx2html(docxfile, header, footer):
         html = result.value
 
     title = title.strip(".docx")
+    
+    #add css links
+    links = '<meta charset="utf-8">'
+    links += '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'
+    links += '<meta name="description" content="">'
+    links += '<meta name="author" content="">'
+    links += f'<title>{title}</title>'
+    links += '<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
+    links += '<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">'
+    links += "<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>"
+    links += "<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>"
+    links += '<link href="css/clean-blog.min.css" rel="stylesheet">'
 
     #create a temp file, its gonna be difficult to read
     with open("temp_html", "w+") as html_file:
-        html_file.write(f"<!DOCTYPE html><html><head><title>{title}</title></head><body>") #add initial syntax and title
+        html_file.write(f"<!DOCTYPE html><html><head>{links}</head><body>") #add initial syntax and title
         
         html_file.write(f"<span>Author: {author}Date: {day}/{month}/{year}</span>") # add author and date
         
@@ -209,6 +232,4 @@ def fileMove():
 
 ######################################--End--######################################
 
-whateverFile = sys.argv[1]
-updatedb(whateverFile)
-fileMove()
+#updatedb(sys.argv[1])

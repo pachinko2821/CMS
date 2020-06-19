@@ -1,13 +1,8 @@
 <?php
     include '../includes/php/connect.php';
     session_start();
-    $username = $_SESSION['user'];
-    setcookie($username, "7355608");
     
-    if(empty($username)){
-        header("Location: admin-login.php");
-    }
-    elseif(!isset($_COOKIE)){
+    if(!isset($_COOKIE)){
         header("Location: admin-login.php");
     }
 
