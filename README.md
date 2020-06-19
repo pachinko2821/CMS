@@ -8,3 +8,4 @@ To-Do:
 
 1. fix blog css
 2. fix LFI
+3. fix data not being added to approvedPosts
