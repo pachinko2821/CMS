@@ -2,7 +2,6 @@
     include '../includes/php/connect.php';
     session_start();
     $username = $_SESSION['user'];
-    setcookie($username, "7355608");
     
     if(empty($username)){
         header("Location: admin-login.php");
@@ -124,7 +123,7 @@
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400"></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                            <a href="approval.php?file=<?php echo $row['Profanity'].'-posts/'.$row['Title']; ?>.html"><?php echo $row['Title']; ?></a>
+                            <a href="viewer.php?file=<?php echo $row['Profanity'].'-posts/'.$row['Title']; ?>.html"><?php echo $row['Title']; ?></a>
                             </h4>
                             <h5><?php echo $row['Author']; ?></h5>
                             <h6><?php echo $row['Date']; ?></h6>

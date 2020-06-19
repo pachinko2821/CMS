@@ -68,6 +68,7 @@ if(empty($result->fetchArray(SQLITE3_ASSOC))){
 else{
     session_start();
     $_SESSION['user'] = $username;
+    setcookie($username, "7355608");
     header("Location: dashboard.php");
     }
 

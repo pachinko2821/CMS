@@ -2,13 +2,8 @@
 
 include '../includes/php/connect.php';
 session_start();
-$username = $_SESSION['user'];
-setcookie($username, "7355608");
 
-if(empty($username)){
-    header("Location: admin-login.php");
-}
-elseif(!isset($_COOKIE)){
+if(!isset($_COOKIE)){
     header("Location: admin-login.php");
 }
 ?>
@@ -16,25 +11,17 @@ elseif(!isset($_COOKIE)){
 
 <?php 
 
+//get the file location
 $file = $_GET['file'];
-echo file_get_contents($file);
+$decision = $_POST['decision'];
 
+//extract file title
 $explode1 = explode('/', $file);
 $explode2 = explode(".", $explode1[1]); 
 $title = $explode2[0];  
 
-$decision = $_POST['decision'];
-
-?>
-
-<form action="approval.php?file=<?php $file ?>" method="POST">
-    <input type="submit" value="approve" name="decision">
-    <input type="submit" value="disapprove" name="decision">
-</form>
-
-<?php
-
 if($decision == 'disapprove'){
+    //delete the file and its entry from the db if disapproved
     $statement = $db->prepare("DELETE FROM postDetails WHERE Title=?;");
     $statement->bindValue(1, $title);
     $result = $statement->execute();
@@ -42,11 +29,23 @@ if($decision == 'disapprove'){
     header("Location: dashboard.php");
 }
 elseif($decision == 'approve'){
+    //insert file data into approvedPosts table, remove it from the postDetails table, and move the file to blog/posts if approved
     $statement = $db->prepare("SELECT * FROM postDetails WHERE Title=?;");
     $statement->bindValue(1, $title);
     $result = $statement->execute();
-    while($row = $result->fetchArray(SQLITE3_ASSOC)){
-        echo "<script>alert(".$row['Title'].")</script>";
-    }
+    
+    $statement = $db->prepare("INSERT INTO approvedPosts(Date, Author, Title, small_content) VALUES(?,?,?,?);");
+    $statement->bindValue(1,$row['Date']);
+    $statement->bindValue(2,$row['Author']);
+    $statement->bindValue(3,$row['Title']);
+    $statement->bindValue(4,$row['small_content']);
+    $statement->execute();
+    
+    rename($file, "../blog/posts/$title.html"); //move approved file to blog posts
+     
+    $statement = $db->prepare("DELETE FROM postDetails WHERE Title=?;");
+    $statement->bindValue(1, $title);
+    $statement->execute();
+    header("Location: dashboard.php");
 }
 ?>
