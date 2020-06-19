@@ -6,6 +6,5 @@ A Python-php-sqlite based CMS:
 
 To-Do:
 
-1. Take Admin approval for posts
-2. Add main blog page
-3. fix change-password.php
+1. fix blog css
+2. fix LFI
