@@ -210,9 +210,9 @@ def updatedb(whateverFile): #takes file as an argument
     Date, Author, Title, small_content = fdetails[0], fdetails[1], fdetails[2], fdetails[3] #gets file details to add into database
 
     #uncomment below line for text files
-    txt2html(whateverFile, "This is a Header", "This is a Footer") # converts txt to html
+    #txt2html(whateverFile, "This is a Header", "This is a Footer") # converts txt to html
     #uncomment below line for docx files
-    #docx2html(whateverFile, "This is a Header", "This is a Footer") # converts docx to html if no cuss words found 
+    docx2html(whateverFile, "This is a Header", "This is a Footer") # converts docx to html if no cuss words found 
 
     #inserts file details into the database
     cursor.execute(f"INSERT INTO postDetails(Date, Author, Title, Profanity, small_content) VALUES('{Date}', '{Author}', '{Title}', '{profanity}', '{small_content}');")
@@ -232,4 +232,4 @@ def fileMove():
 
 ######################################--End--######################################
 
-#updatedb(sys.argv[1])
+updatedb(sys.argv[1])
