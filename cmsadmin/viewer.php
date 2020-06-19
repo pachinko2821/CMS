@@ -2,8 +2,8 @@
 
 include '../includes/php/connect.php';
 session_start();
-
-if(!isset($_COOKIE)){
+$username = $_SESSION['user'];
+if(!isset($_COOKIE[$username])){
     header("Location: admin-login.php");
 }
 
