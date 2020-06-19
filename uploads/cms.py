@@ -92,7 +92,7 @@ def txt2html(txtfile, header, footer):
 
     content = text.read()
     #add css links
-        links = '<meta charset="utf-8">'
+    links = '<meta charset="utf-8">'
     links += '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'
     links += '<meta name="description" content="">'
     links += '<meta name="author" content="">'
