@@ -106,7 +106,7 @@
                 <div class="card-body">
                 <h5 class="card-title"> <?php echo $row['Title']; ?> </h5>
                 <p class="card-text"> <?php echo $row['small_content']; ?> </p>
-                <a href="blogs/<?php echo $row['Title']?>.html" class="btn">View Article</a>
+                <a href="posts/<?php echo $row['Title']?>.html" class="btn">View Article</a>
                 </div>
             </div>
         </div>
