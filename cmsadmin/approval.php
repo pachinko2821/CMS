@@ -40,9 +40,9 @@ elseif($decision == 'approve'){
     $statement->bindValue(2,$row['Author']);
     $statement->bindValue(3,$row['Title']);
     $statement->bindValue(4,$row['small_content']);
-    $statement->execute();
+    $result = $statement->execute();
     
-    rename($file, "../blog/posts/$title.html"); //move approved file to blog posts
+    rename("$file", "../blog/posts/$title.html"); //move approved file to blog posts
      
     $statement = $db->prepare("DELETE FROM postDetails WHERE Title=?;");
     $statement->bindValue(1, $title);
