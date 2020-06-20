@@ -155,8 +155,7 @@ def docx2html(docxfile, header, footer):
             year, month, day, author, title = name.split('-') # extracts date, author, and title from file name
         except:
             exit()
-    
-    
+
         result = mammoth.convert_to_html(docx_file)
         html = result.value
 
@@ -165,13 +164,13 @@ def docx2html(docxfile, header, footer):
     #add css links
     links = '<meta charset="utf-8">'
     links += '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'
-    links += '<link rel="shortcut icon" href="../img/small_icon.png" />'
+    links += '<link rel="shortcut icon" href="/includes/img/small_icon.png" />'
     links += '<title>Blog - OEUVRE</title>'
     links += '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MY>'
-    links += '<link rel="stylesheet" href="../stylesheets/blog.css">'
+    links += '<link rel="stylesheet" href="/includes/stylesheets/blog.css">'
     links += '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">'
-    links += '<link rel="stylesheet" href="../stylesheets/hdft.css">'
-    links += '<link rel="stylesheet" href="../stylesheets/dark-mode.css">'
+    links += '<link rel="stylesheet" href="/includes/stylesheets/hdft.css">'
+    links += '<link rel="stylesheet" href="/includes/stylesheets/dark-mode.css">'
 
     #create a temp file, its gonna be difficult to read
     with open("temp_html", "w+") as html_file:
