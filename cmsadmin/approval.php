@@ -31,22 +31,24 @@ if($decision == 'disapprove'){
 }
 elseif($decision == 'approve'){
     //insert file data into approvedPosts table, remove it from the postDetails table, and move the file to blog/posts if approved
-    $statement = $db->prepare("SELECT * FROM postDetails WHERE Title=?;");
-    $statement->bindValue(1, $title);
-    $result = $statement->execute();
+    $get_data = $db->prepare("SELECT * FROM postDetails WHERE Title=?;");
+    $get_data->bindValue(1, $title);
+    $result = $get_data->execute();
     
-    $statement = $db->prepare("INSERT INTO approvedPosts(Date, Author, Title, small_content) VALUES(?,?,?,?);");
-    $statement->bindValue(1,$row['Date']);
-    $statement->bindValue(2,$row['Author']);
-    $statement->bindValue(3,$row['Title']);
-    $statement->bindValue(4,$row['small_content']);
-    $result = $statement->execute();
+    $row = $result->fetchArray();
+
+    $put_data = $db->prepare("INSERT INTO approvedPosts(Date, Author, Title, small_content) VALUES(?,?,?,?);");
+    $put_data->bindValue(1,$row['Date']);
+    $put_data->bindValue(2,$row['Author']);
+    $put_data->bindValue(3,$row['Title']);
+    $put_data->bindValue(4,$row['small_content']);
+    $put_data->execute();
     
     rename("$file", "../blog/posts/$title.html"); //move approved file to blog posts
      
-    $statement = $db->prepare("DELETE FROM postDetails WHERE Title=?;");
-    $statement->bindValue(1, $title);
-    $statement->execute();
+    $delete_data = $db->prepare("DELETE FROM postDetails WHERE Title=?;");
+    $delete_data->bindValue(1, $title);
+    $delete_data->execute();
     header("Location: dashboard.php");
 }
 ?>
