@@ -76,8 +76,10 @@ def show_cuss_words():
 ######################################--End--######################################
 
 
-######################################--txt to html functions--######################################    
+######################################--conversion functions--######################################    
     
+'''
+
 #txt2html function converts the file from txt to html, also adds a header/footer
 def txt2html(txtfile, header, footer):
     text = open(txtfile, "r") 
@@ -140,7 +142,7 @@ def txt2html(txtfile, header, footer):
     os.remove("temp_html") # delete temp file
     print(f"File converted and saved as {title}.html!")
     
-
+'''
 
 
 #converts docx file to html
@@ -163,20 +165,19 @@ def docx2html(docxfile, header, footer):
     #add css links
     links = '<meta charset="utf-8">'
     links += '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'
-    links += '<meta name="description" content="">'
-    links += '<meta name="author" content="">'
-    links += f'<title>{title}</title>'
-    links += '<link href="/includes/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
-    links += '<link href="/includes/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">'
-    links += "<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>"
-    links += "<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>"
-    links += '<link href="/includes/css/clean-blog.min.css" rel="stylesheet">'
+    links += '<link rel="shortcut icon" href="../img/small_icon.png" />'
+    links += '<title>Blog - OEUVRE</title>'
+    links += '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MY>'
+    links += '<link rel="stylesheet" href="../stylesheets/blog.css">'
+    links += '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">'
+    links += '<link rel="stylesheet" href="../stylesheets/hdft.css">'
+    links += '<link rel="stylesheet" href="../stylesheets/dark-mode.css">'
 
     #create a temp file, its gonna be difficult to read
     with open("temp_html", "w+") as html_file:
         html_file.write(f"<!DOCTYPE html><html><head>{links}</head><body>") #add initial syntax and title
         
-        html_file.write(f"<span>Author: {author}Date: {day}/{month}/{year}</span>") # add author and date
+        html_file.write(f"<p>Author: {author}\nDate: {day}/{month}/{year}</p>") # add author and date
         
         html_file.write(html+"</html>")
     html_file.close()
