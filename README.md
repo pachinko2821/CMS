@@ -9,3 +9,4 @@ To-Do:
 1. fix blog css
 2. fix LFI
 3. fix data not being added to approvedPosts
+4. find a way for blog card-image storage
