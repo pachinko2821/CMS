@@ -1,0 +1,18 @@
+.maintextbody{
+  height: 1000px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.imagebox1{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+   width: 50vw;
+   max-width: 177.78vh;
+   /* 16/9 = 1.778 */
+   height: 56.25vw;
+   /* height:width ratio = 9/16 = .5625  */
+   max-height:  40vh;
+   background-color: black;
+}

@@ -1,0 +1,296 @@
+*{
+  scroll-behavior: smooth;
+}
+
+body{
+  min-height: 100%;
+  display:flex;
+  flex-direction: column;
+}
+/*archives hoverable button start*/
+.dropbtn {
+  background-color: inherit;
+  color: inherit;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f7f3ad;
+  width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: inherit;
+  color: #c21111;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: inherit;}
+/*archives hoverable button end*/
+
+/*Logo darkmode-lightmode start*/
+.logold{
+  background-image: url("../img/logol.png");
+  background-size: contain;
+  height:66px;
+}
+/*Logo darkmode-lightmode start*/
+
+
+/*fcrit blog ribbon end*/
+.footer1 a 
+{
+  color:white;
+  
+  font-size: 22px;
+  text-decoration: none;
+
+    
+
+}
+
+.footer1 {
+  
+  background-color: #329fe7 ;
+  padding: 0.5% 0% 0.5% 0%;
+  
+}
+/*fcrit blog ribbon end*/
+
+
+/*  navigation bar start*/
+#nav-bar{
+    position: sticky;
+    top: 0;
+    z-index:10;
+}
+.navbar-brand img{
+
+  width: 200px;
+
+  height: auto;
+    padding-left:30;
+}
+.navbar-nav li{
+    padding:0 10px;
+}
+.navbar-nav li a{
+    text-align:left;
+    color: black;
+}
+#nav-bar ul li a:hover{
+    color :#c21111!important;
+    right:0px;
+}
+.navbar{
+    background: #FEF98D;
+}
+.navbar-toggler{
+	background-color: #dc3545;
+    border:none!important;
+}
+.button:active,
+ button:active,
+.button:focus,
+ button:focus,
+.button:hover,
+ button:hover{
+    border:none !important;
+    outline:none !important; /*Code here is to remove black border around archives button on click*/
+}
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.nav-link{
+    color: black!important;
+    font-weight:600;
+    font-size: 16px;
+}
+.input-group.md-form.form-sm.form-2 input.red-border{
+    border: 1px solid #c21111;
+  }
+  .blog .carousel-indicators {
+	left: 0;
+	top: auto;
+    bottom: -40px;
+}
+
+/*button body*/
+.btn{
+  color:white;
+  background-color: #dc3545;
+  transition-duration: 0.3s;
+
+}
+.btn:hover{
+  color:white;
+  background-color: #ff0e56;
+}
+/*button body*/
+.btn1{
+  width: 80px;
+  height: 40px;
+  border-radius: 6px;
+  border:none;
+  position: relative;
+  top: -8px;
+  background-color: #dc3545;
+  color: white;
+}
+.btn1:hover{
+  background-color: #c21111;
+  color: white;
+}
+/*navbar end*/
+
+
+/*footer start*/
+.site-footer{
+  background-color: #f7f3ad;
+  background-size: auto;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  margin-top: auto;
+  padding-bottom:0
+}
+.site-footer hr{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small{
+  margin:20px 0
+}
+.site-footer h6{
+  font-size:20px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a:hover{
+  text-decoration:none;
+}
+.footer-links{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li{
+  display:block
+}
+.footer-links a{
+  color: black;
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover{
+  text-decoration:none;
+}
+.footer-links.inline li{
+  display:inline-block
+}
+.site-footer .social-icons{
+  text-align:right
+}
+.site-footer .social-icons a{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d;
+}
+.copyright-text{
+  margin:0
+}
+@media (max-width:991px){
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px){
+.site-footer .copyright-text,.site-footer .social-icons{
+    text-align:center
+  }
+}
+.social-icons{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b200;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:white;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover{
+  background-color:#00aced
+}
+.social-icons a.instagram:hover{
+  background-color:#ea4c89;
+}
+.social-icons a.dribbble:hover{
+  background-color:#ea4c89
+}
+@media (max-width:767px){
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600;
+  }
+}
+/*footer end*/

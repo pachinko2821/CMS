@@ -1,0 +1,243 @@
+
+
+.bg-primary{
+    background-color: white!important;
+}
+#faq
+{
+    color:	#fe003b;
+    font-size: 8vw;
+    text-decoration: none;
+    font-weight: 700;
+}
+#faq:hover
+{
+    color:	#920f2e;
+   
+}
+/**/
+#transit
+{
+    color:rgb(255, 77, 77);
+    text-decoration: none;
+    font-size: 4vw;
+
+}
+
+#transit:hover
+{
+    color:rgb(136, 38, 38);
+    
+
+}
+/**/
+#todo
+{
+    color:rgb(255, 77, 77);
+    text-decoration: none;
+    font-size:5vw;
+
+}
+#todo:hover
+{
+    color:rgb(109, 19, 19);
+    
+
+}
+/**/
+#canteen
+{
+    color:	#ffc002;
+    text-decoration: none;
+    font-size:3vw;
+}
+#canteen:hover
+{
+    color:	#9e7701;
+}
+/**/
+#stories
+{
+    color:	#ffc002;font-size:3vw;
+    text-decoration: none;
+}
+#stories:hover
+{
+    color:	#a07904;
+  
+}
+/**/
+#labs
+{   color:#ffc002;font-size:3vw;
+    text-decoration: none;
+    
+}
+#labs:hover
+{   color:#916d03;
+    text-decoration: none;
+    
+}
+/**/
+#projects
+{
+    color:rgb(255, 77, 77);
+    text-decoration: none;
+    font-size: 5vw;
+}
+#projects:hover
+{
+    color:rgb(151, 49, 49);
+    
+}
+/**/
+#founders
+{
+    color:	#59cea1;
+    text-decoration: none;
+    font-size: 5vw;
+}
+#founders:hover
+{
+    color:	#368365;
+}
+/**/
+#office
+{
+    color:rgb(255, 77, 77);font-size:3vw;
+    text-decoration: none;
+}
+#office:hover
+{
+    color:rgb(105, 33, 33);
+  
+}
+/**/
+#building
+{
+    color:rgb(255, 88, 116);font-size:3vw;
+    text-decoration: none;
+}
+#building:hover
+{
+    color:rgb(214, 22, 54);
+    text-decoration: none;
+}
+/**/
+#fests
+{
+    color:red;font-size:3vw;
+    text-decoration: none;
+}
+#fests:hover
+{
+    color:rgb(150, 6, 6);
+    
+}
+/**/
+#music
+{
+    
+    color:#ffc002;font-size:3vw;
+    text-decoration: none;
+
+}
+#music:hover
+{
+    
+    color:#c59402;font-size:3vw;
+    text-decoration: none;
+
+}
+/**/
+#alumini
+{
+    color: #8bbf0f;
+    text-decoration: none;
+    font-size:5vw;
+}
+
+#alumini:hover
+{
+    color: #628a06;
+    text-decoration: none;
+    font-size:5vw;
+}
+/**/
+#facilities
+{
+    color:#8bbf0f;font-size:3vw;
+    text-decoration: none;
+   
+}
+#facilities:hover
+{
+    color:#638514;
+    text-decoration: none;
+   
+}
+/**/
+#events
+{
+    color:#b98ac3;font-size:3vw;
+    text-decoration: none;
+}
+#events:hover
+{
+    color:#6e5075;font-size:3vw;
+    text-decoration: none;
+}
+/**/
+#sports
+{
+    color:	#59cea1;font-size:3vw;
+    text-decoration: none;
+}
+#sports:hover
+{
+    color:	#34775d;font-size:3vw;
+    text-decoration: none;
+}
+/**/
+#infrastructure
+{
+    color:#b98ac3;
+    text-decoration: none;
+    font-size:5vw;
+    
+}
+#infrastructure:hover
+{
+    color:#684c6e;
+    text-decoration: none;
+    font-size:5vw;
+    
+}
+/**/    
+#tedx
+{
+    color:rgb(240, 48, 0);font-size:3vw;
+    text-decoration: none;
+}
+#tedx:hover
+{
+    color:rgb(161, 32, 0);
+    text-decoration: none;
+}
+/**/
+#faqscroll   /*access*/
+{
+    color: #8bbf0f;font-size:3vw;
+    text-decoration: none;
+}
+#faqscroll:hover/*access word*/
+{
+    color: #58790b;
+    text-decoration: none;
+}
+
+/*bottom faq*/
+#accordion-faq
+{
+    margin-left: 15%;
+    margin-right: 15%;
+}

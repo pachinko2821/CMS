@@ -1,0 +1,69 @@
+[data-theme="dark"] {
+  background-color: #101619 !important;
+  color: #3c879c;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: #101619 !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: #000 !important;
+}
+
+[data-theme="dark"] .bg-black {
+  background-color: #3c879c !important;
+}
+[data-theme="dark"] .navbar {
+    background: #171e21;
+}
+[data-theme="dark"] .site-footer {
+  background-color: #171e21;
+}
+[data-theme="dark"] .footer-links a {
+  color: #3c879c;
+}
+[data-theme="dark"] .navbar-nav li a {
+  color :#3c879c;
+}
+[data-theme="dark"] .nav-link {
+  color:#3c879c!important;
+}
+[data-theme="dark"] #nav-bar ul li a:hover {
+  color :#5ff5ff!important;
+}
+[data-theme="dark"] .bg-primary {
+  background-color: #171e21!important;
+}
+[data-theme="dark"] .card {
+  color: #3c879c!important;
+}
+[data-theme="dark"] .dropdown-content {
+  background-color: #171e21;
+}
+[data-theme="dark"] .btn1:hover {
+  background-color: #5ff5ff;
+  color:black;
+}
+[data-theme="dark"] .btn1 {
+  background-color: #3c879c;
+}
+[data-theme="dark"] .btn:hover {
+  background-color: #5ff5ff;
+  color:black;
+}
+[data-theme="dark"] .container-fluid1 {
+  background-color: #171e21;
+}
+[data-theme="dark"] .navbar-toggler {
+	background-color: #171e21;
+}
+[data-theme="dark"] .btn {
+  background-color: #3c879c;
+}
+[data-theme="dark"] .logold {
+  background-image: url("../img/logod.png");
+}
+[data-theme="dark"] .social-link {
+  color: white;
+}

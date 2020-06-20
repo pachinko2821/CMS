@@ -1,0 +1,212 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/*card effect repair-aakash*/
+.card
+{overflow:hidden;
+}
+.card-img-top
+{
+  transition: all 0.3s ease-in;
+}
+.card-img-top:hover
+{
+  transform: scale(1.1);
+  opacity: 0.7;
+
+
+}
+.bg-primary {
+  background-color: #fff!important;
+}
+.card
+{
+  margin:2% 0% 2% 0%;
+}
+
+
+/*side right trending articles ka margin spacing*/
+
+.display-4
+{
+    margin: 5% 0% 5% 0%;
+}
+
+.display-3
+{
+    margin: 5% 0% 1% 0%;
+}
+
+
+
+/*title image*/
+#imagetitle
+{
+    
+    padding: 0% 5% 3% 5%;
+
+}
+/*container content*/
+.containercontent
+{
+    padding: 5% 7% 5% 7%;
+
+}
+
+/*author name ka kam*/
+.container-fluid1
+{
+  background-color: #FEF98D;
+}
+#authorkanam  h4
+{
+  margin: 2% 0% 2% 0%;
+}
+/*for whatsapp visibility*/
+
+@media screen and (min-width: 1200px) {
+  #mobile-share {
+  visibility: hidden;
+  clear: both;
+  float: left;
+  margin: 10px auto 5px 20px;
+  width: 28%;
+  display: none;
+  color:greenyellow
+  }
+ }
+
+
+ #share-button a
+ {
+      
+      align-content: flex-end;
+ }
+
+ /*sidebar*/
+ /* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: white; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 100px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+
+
+
+/* The sidebar links 
+.sidebar a {
+  padding: 0px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.1s;
+}*/
+
+/* When you mouse over the navigation links, change their color 
+.sidebar a:hover {
+  color: white;
+}
+*/
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  display: block;
+  transition: 0.1s;
+  }
+
+
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  
+ padding-bottom: 12%;
+  
+  font-size: 60px;
+ 
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+ 
+  cursor:pointer;
+  background-color: #00b919d0;
+ color: white;
+  padding: 15px 20px;/*text padding*/
+  border: none;  
+  border-radius: 50%;
+}
+
+.openbtn:hover {
+  background-color: #046e12;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; 
+ 
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 0px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/*social icons colours*/
+#facebook 
+{
+    color:  #3b5998;
+}
+#facebook :hover
+{
+    color:  #003cbd;
+    
+}
+
+
+#twitter
+{
+  color:#1dcaff;
+}
+#twitter:hover
+{
+  color:#0490bb;
+}
+
+#reddit
+{
+  color:#ff4301;
+}
+#reddit:hover
+{
+  color:#b12f00;
+}
+#linkedin
+{
+  color:#0077b5;
+}
+#linkedin:hover
+{
+  color:#035581;
+}
+#mobile-share
+{
+  color:#25d366;
+}
+
+#closebutton
+{
+  color:rgb(112, 109, 109);
+}

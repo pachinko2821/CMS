@@ -1,0 +1,33 @@
+/*construction page start*/
+.const{
+}
+.cont_const{
+  position: relative;
+  margin-top: 5%;
+  height:1000px;
+}
+.image_parallax{
+  background-image: url("../img/img_parallax.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.underconstruction_text{
+  color:white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  margin-bottom: auto;
+  text-transform: uppercase;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.underconstruction_text h1{
+  padding-top: 100px;
+  font-size: 35px;
+  font-weight: 900;
+}
+/*construction end*/

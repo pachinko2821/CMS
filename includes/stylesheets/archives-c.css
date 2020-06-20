@@ -1,0 +1,94 @@
+
+
+/*card effect repair-aakash*/
+.card
+{overflow:hidden;
+
+}
+.card-img-top
+{
+  transition: all 0.3s ease-in;
+
+}
+.card-img-top:hover
+{
+  transform: scale(1.1);
+  opacity: 0.7;
+
+
+}
+#cardsection
+{
+	margin: 0% 0% 5% 0%;
+}
+/*card effect repair-aakash*/
+.bg-primary {
+  background-color: #fff!important;
+}
+.card
+{
+  margin:2% 0% 2% 0%;
+}
+
+/*applying smooth scroll to all the items*/
+*{
+  scroll-behavior: smooth;
+  
+}
+.display-3
+{
+  margin: 5% 0% 5% 0%;
+  ;
+ 
+}
+
+.display-4
+{
+  
+  margin: 7% 0% 7% 0%;
+ 
+  
+
+}
+
+/*left navbar edit of buttons*/
+/*
+#leftnavbar button
+{
+  
+  background-color: #113236;
+  color: white;
+
+}
+*/
+#leftnavbar button:hover
+{
+ 
+  background-color:#fff;/*creative nd informative button color and effects*/
+  color: black;
+
+}
+
+#collapseOne a
+{
+  background-color: white;
+  color: black;
+}
+#collapseThree a
+{
+  background-color: white;
+  color: black;
+}
+
+
+#collapseOne a:hover
+{
+  background-color:#5bc0de;
+  color: white;
+
+}
+#collapseThree a:hover
+{
+  background-color:#5bc0de;
+  color: white;
+}
