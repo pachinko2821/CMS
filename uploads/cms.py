@@ -8,6 +8,8 @@ provide txt files with name in the format "year-month-day-author-title.txt"
 import os
 # uses mammoth to extract txt from docx/convert docx to html
 import mammoth
+# uses docx2txt to extract images
+import docx2txt
 import datetime
 #BeautifulSoup to prettify the html doc
 from bs4 import BeautifulSoup as bs
@@ -56,7 +58,6 @@ def check_profanity(docfile):
     small_content += "...."
 
     flag = 'green' # green by default
-    print(content)
     for cuss in cuss_words:
         if cuss in content:
             found_cuss_words.append(cuss) # appends found cuss words to the found_cuss_words list
@@ -153,6 +154,7 @@ def docx2html(docxfile, header, footer):
     
         try:
             year, month, day, author, title = name.split('-') # extracts date, author, and title from file name
+            docx2txt.process(docxfile, f"../includes/posts/images/{title}/") # extract and save images
         except:
             exit()
 
@@ -180,6 +182,7 @@ def docx2html(docxfile, header, footer):
         
         html_file.write(html+"</html>")
     html_file.close()
+
 
     #beautify the temp file and create the actual html document
     with open("temp_html", "r") as html_file:
