@@ -154,7 +154,6 @@ def docx2html(docxfile, header, footer):
     
         try:
             year, month, day, author, title = name.split('-') # extracts date, author, and title from file name
-            docx2txt.process(docxfile, f"../includes/posts/images/{title}/") # extract and save images
         except:
             exit()
 
@@ -162,6 +161,8 @@ def docx2html(docxfile, header, footer):
         html = result.value
 
     title = title.strip(".docx")
+    os.mkdir(f"../includes/posts/images/{title}")
+    docx2txt.process(docxfile, f"../includes/posts/images/{title}/") # extract and save images
     
     #add css links
     links = '<meta charset="utf-8">'

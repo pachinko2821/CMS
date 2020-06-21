@@ -44,7 +44,7 @@ elseif($decision == 'approve'){
     $put_data->bindValue(4,$row['small_content']);
     $put_data->execute();
     
-    rename($row['Profanity']/$title.".html", "../blog/posts/$title.html"); //move approved file to blog posts
+    rename($row['Profanity']."-posts/".$title.".html", "../blog/posts/$title.html"); //move approved file to blog posts
      
     $delete_data = $db->prepare("DELETE FROM postDetails WHERE Title=?;");
     $delete_data->bindValue(1, $title);

@@ -117,7 +117,7 @@
             while($row = $result->fetchArray(SQLITE3_ASSOC)){ ?>  
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400"></a>
+                        <a href="#"><img class="card-img-top" src="/includes/posts/images/<?php echo $row['Title']; ?>/image1.jpeg"></a>
                         <div class="card-body">
                             <h4 class="card-title">
                             <a href="viewer.php?file=<?php echo $row['Profanity'].'-posts/'.$row['Title']; ?>.html"><?php echo $row['Title']; ?></a>

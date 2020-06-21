@@ -102,7 +102,7 @@
     while($row = $result->fetchArray()){ ?>
         <div class="col-md-4 pb-1 pb-md-0">
             <div class="card shadow bg-primary">
-                <a href="/blog/posts/<?php echo $row['Title']?>.html"><img class="card-img-top" src="blogs/img/blog5.png" alt="Card image cap"></a>
+                <a href="/blog/posts/<?php echo $row['Title']?>.html"><img class="card-img-top" src="/includes/posts/images/<?php echo $row['Title']; ?>/image1.jpeg" alt="Card image cap"></a>
                 <div class="card-body">
                 <h5 class="card-title"> <?php echo $row['Title']; ?> </h5>
                 <p class="card-text"> <?php echo $row['small_content']; ?> </p>
