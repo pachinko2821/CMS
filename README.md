@@ -6,7 +6,5 @@ A Python-php-sqlite based CMS:
 
 To-Do:
 
-1. fix blog css
+1. fix blog css (images too huge after conversion)
 2. fix LFI
-3. fix data not being added to approvedPosts
-4. find a way for blog card-image storage
