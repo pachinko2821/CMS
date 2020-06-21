@@ -16,16 +16,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link id="pagestyle" rel="stylesheet" type="text/css" href="/includes/stylesheets/hdft.css">
     <link rel="stylesheet" href="/includes/stylesheets/dark-mode.css">
-    <title>OEUVRE</title>
+    <title>The MGM Rant</title>
   </head>
   <body>
        <!---navigation bar------------>
-    <div class="footer1 text-center">
-      <a href="https://fcrit.ac.in/" id="nameofclg" target="_blank">Official Blog of Fr. Conceicao Rodrigues Institute of Technology</a>
-      </div>
-   <section id="nav-bar">
+  <section id="nav-bar">
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand logold" href="index.php"><img src="/includes/img/logo.png"></a>
+        <a class="navbar-brand logold" href="/blog/index.php"><img src="/includes/img/logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,21 +34,6 @@
                 <label class="custom-control-label" for="darkSwitch"><i class="fa fa-moon-o"></i></label>
               </div>
               </li>
-              <li class="nav-item ml-auto">
-                <div class="dropdown nav-link ml-auto">
-                  <button class="dropbtn" href="">ARCHIVES</button>
-                  <div class="dropdown-content">
-                    <a href="archives-c.html">Creative</a>
-                    <a href="archives-i.html">Informative</a>
-                  </div>
-                </div>
-              </li>
-            <li class="nav-item ml-auto">
-              <a class="nav-link" href="faq.html">F.A.Q.</a>
-            </li>
-            <li class="nav-item ml-auto">
-              <a class="nav-link" href="construction.html">HUMANS OF AGNELS</a>
-            </li>
             <li class="nav-item ml-auto">
               <a class="nav-link" href="aboutus.html">ABOUT US</a>
             </li>
@@ -65,28 +47,33 @@
 <!--navigation bar end-->
 
 <!--carousel start-->
-  <div id="slider">
-    <div id="headerSlider" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div id="car1" class="carousel-item active ">
-          <img src="/includes/img/1.png" class="d-block img-fluid" >
-        </div>
-        <div id="car2" class="carousel-item">
-            <img src="/includes/img/2.png" class="d-block img-fluid">
-        </div>
-        <div id="car3" class="carousel-item">
-            <img src="/includes/img/1.png" class="d-block img-fluid" >
-        </div>
+<div class="col-lg-9" style="width:55%; margin:0 auto;">
+
+  <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel" >
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <img class="d-block img-fluid" src="https://www.mgmmumbai.ac.in/mgmcet/sites/default/files/inline-images/accellors.jpg" alt="First slide">
       </div>
-      <a class="carousel-control-prev" href="#headerSlider" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#headerSlider" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      <div class="carousel-item">
+        <img class="d-block img-fluid" src="https://www.mgmmumbai.ac.in/mgmcet/sites/default/files/inline-images/marathi-day-3.JPG" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block img-fluid" src="https://www.mgmmumbai.ac.in/mgmcet/sites/default/files/inline-images/marathi-day-1.JPG" alt="Third slide">
+      </div>
     </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 <!--carousel end-->
 <!--main cards start-->
@@ -116,26 +103,7 @@
     </div>
     </div>
 <!--main cards end-->
-<!--Informative-creative start-->
-    <h3 class=" display-3 text-center" >Archives</h3>
-    <section id="cardsection">
-    <div class="container">
-      <div class="row text-center"><!------->
-        <div class="col-md-6 pb-1 pb-md-0">
-          <div class="card shadow bg-primary">
-            <a  href="archives-c.html"><img class="card-img-top" src="/includes/img/creative.png" alt="Card image cap"></a>
-          </div>
-        </div>
-        <div class="col-md-6 pb-1 pb-md-0">
-          <div class="card shadow bg-primary">
-            <a href="archives-i.html"><img class="card-img-top" src="/includes/img/informative.png"  alt="Card image cap"></a>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </section>
-<!--informative-creative end-->
+
   <br><br>
   <!-- Site footer start -->
   <footer class="site-footer">
@@ -147,18 +115,6 @@
         <div class="col-sm-12 col-md-6">
           <h6 class="text-center"><b>About</b></h6>
           <p class="text-center">The official blog of Fr. C. Rodrigues Institute of Technology showcasing the up and coming creative talent in the institution. The Website is a showcase to the immense potential of engineering students around the world.</p>
-        </div>
-        <div class="col-xs-6 col-md-3">
-          <h6 class="text-center">Sections</h6>
-          <ul class="footer-links" style="text-align:center;">
-            <li><a href="archives-c.html">Articles</a></li>
-            <li><a href="archives-c.html">Poems</a></li>
-            <li><a href="archives-c.html">Graphic Arts</a></li>
-            <br>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="archives-i.html">Senior Guidance</a></li>
-            <li><a href="archives-i.html">Tutorials</a></li>
-          </ul>
         </div>
       </div>
       <hr>
