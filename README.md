@@ -6,5 +6,4 @@ A Python-php-sqlite based CMS:
 
 To-Do:
 
-1. fix blog css (images too huge after conversion)
-2. fix LFI
+1. fix LFI
