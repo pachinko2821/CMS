@@ -19,7 +19,7 @@ include '../includes/php/connect.php';
 <!-- include header -->
 <div w3-include-html="/includes/php/header.html"></div>
 
-  <img class="center" src="/includes/img/logo.png" alt="The MGM Rant" class="logo">
+  <img class="center" src="/includes/img/logo.png" alt="The MGM Rant">
   <br><br>
 
 <!--carousel start-->
@@ -70,7 +70,7 @@ include '../includes/php/connect.php';
   $statement = $db->prepare("SELECT * FROM approvedPosts;");
   $result = $statement->execute();
     while($row = $result->fetchArray()){ ?>
-      <div class="card bg-dark shadow" style="width: 18rem;">
+      <div class="center card bg-dark shadow rounded" style="width: 18rem;">
         <a href="/blog/posts/<?php echo $row['Title']; ?>.html"><img src="/includes/posts/images/<?php echo $row['Title']; ?>/image1.jpeg" class="card-img-top" alt="Your net slow lol"></a>
         <div class="card-body">
           <h5 class="card-title"><?php echo $row['Title']; ?></h5>
