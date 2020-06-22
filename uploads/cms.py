@@ -14,7 +14,6 @@ import datetime
 #BeautifulSoup to prettify the html doc
 from bs4 import BeautifulSoup as bs
 import sqlite3
-import sys
 
 ######################################--Profanity related functions--######################################
 # a list of cuss words in hinglish
@@ -24,7 +23,7 @@ cuss_words = ['badhir', 'badhirchand', 'bhakland', 'bhadva', 'bhootnika', 'china
             'bhains', 'jhalla', 'jhant', 'nabaal', 'pissu', 'kutte', 'maadherchod', 'madarchod', 'padma', 'raand', 'rand', 'jamai', 'randwa', 'randi', 
             'bachachod', 'bachichod', 'soower', 'bachchechod', 'pathe', 'banda', 'booblay', 'booby', 'buble', 'babla', 'bhonsriwala', 'bhonsdiwala', 
             'bhosadiwala', 'ched', 'chut', 'chod', 'chodu', 'chodra', 'choochi', 'chuchi', 'gaandu', 'gandu', 'gaand', 'lavda', 'lawda', 'lauda', 'lund', 
-            'balchod', 'lavander', 'muth', 'maacho', 'mammey', 'tatte', 'toto', 'bhandwe', 'bhosadchod', 'bhosad', 'bumchod', 'bum', 'bur', 'cunt', 'cuntmama', 
+            'balchod', 'lavander', 'muth', 'maacho', 'mammey', 'tatte', 'toto', 'bhandwe', 'bhosadchod', 'bhosad', 'bumchod','communist','communism', 'bum', 'bur', 'cunt', 'cuntmama', 
             'chipkali', 'pasine', 'jhaat', 'chodela', 'bhagatchod', 'chhola', 'chudai', 'chudaikhana', 'chunni', 'choot', 'bhoot', 'dhakkan', 'bhajiye',
             'fateychu', 'gandnatije', 'lundtopi', 'gaandu', 'gaandfat', 'gaandmasti', 'makhanchudai', 'gaandmarau', 'gandu', 'chaatu', 'beej', 'choosu', 
             'fakeerchod', 'lundoos', 'shorba', 'binbheja', 'bhadwe', 'parichod', 'nirodh', 'pucchi', 'baajer', 'choud', 'bhosda', 'choos', 'maka',
@@ -167,21 +166,20 @@ def docx2html(docxfile, header, footer):
     #add css links
     links = '<meta charset="utf-8">'
     links += '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'
-    links += '<link rel="shortcut icon" href="/includes/img/small_icon.png" />'
-    links += '<title>Blog - OEUVRE</title>'
-    links += '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MY>'
-    links += '<link rel="stylesheet" href="/includes/stylesheets/blog.css">'
+    links += '<link rel="stylesheet" href="/includes/css/blog-main.css">'
+    links += '<link rel="stylesheet" href="/includes/css/blog-content.css">'
+    links += '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">'
     links += '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">'
-    links += '<link rel="stylesheet" href="/includes/stylesheets/hdft.css">'
-    links += '<link rel="stylesheet" href="/includes/stylesheets/dark-mode.css">'
+    links += '<script src="/includes/js/includer.js"></script>'
+    links += f'<title>{title}</title>'
 
     #create a temp file, its gonna be difficult to read
     with open("temp_html", "w+") as html_file:
-        html_file.write(f"<!DOCTYPE html><html><head>{links}</head><body>") #add initial syntax and title
+        html_file.write(f"<!DOCTYPE html><head>{links}</head><body class='bg-dark'>") #add initial syntax and title
         
-        html_file.write(f"<p>Author: {author}\nDate: {day}/{month}/{year}</p>") # add author and date
+        html_file.write(f"<div w3-include-html='/includes/php/header.html'></div><div>Author: {author}\nDate: {day}/{month}/{year}<div>") # add author and date
         
-        html_file.write(html+"</html>")
+        html_file.write(html+"<div w3-include-html='/includes/php/footer.html'></div></html><script>includeHTML();</script>")
     html_file.close()
 
 
@@ -236,5 +234,3 @@ def fileMove():
 
 ######################################--End--######################################
 
-updatedb(sys.argv[1])
-fileMove()
