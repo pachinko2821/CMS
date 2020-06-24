@@ -159,7 +159,7 @@ def docx2html(docxfile, header, footer):
         result = mammoth.convert_to_html(docx_file)
         html = result.value
 
-    title = title.strip(".docx")
+    title = title[:-5] # removes '.docx' from name
     title = title.replace("_", " ")
     
     os.mkdir(f"../includes/posts/images/{title}")
