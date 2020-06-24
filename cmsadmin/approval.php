@@ -11,6 +11,24 @@ if(!isset($_COOKIE[$username])){
     
 
 <?php 
+//function to delete a dir with all its contents
+function delete_directory($dirname) {
+    if (is_dir($dirname))
+      $dir_handle = opendir($dirname);
+if (!$dir_handle)
+     return false;
+while($file = readdir($dir_handle)) {
+      if ($file != "." && $file != "..") {
+           if (!is_dir($dirname."/".$file))
+                unlink($dirname."/".$file);
+           else
+                delete_directory($dirname.'/'.$file);
+      }
+}
+closedir($dir_handle);
+rmdir($dirname);
+return true;
+}
 
 //get the file location
 $file = $_GET['file'];
@@ -27,6 +45,7 @@ if($decision == 'disapprove'){
     $statement->bindValue(1, $title);
     $result = $statement->execute();
     unlink($file);
+    delete_directory("../includes/posts/images/".$title);
     header("Location: dashboard.php");
 }
 elseif($decision == 'approve'){

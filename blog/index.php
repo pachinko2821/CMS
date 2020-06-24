@@ -32,7 +32,7 @@ include '../includes/php/connect.php';
           <a class="nav-link" href="/blog/about.html">About Us </a>
         </li>
         <li>
-          <a class="nav-link" href="/blog/upload.php">Upload an Article</a>
+          <a class="nav-link" href="/blog/upload.html">Upload an Article</a>
         </li>
       </ul>
       <a href="/cmsadmin/admin-login.php"><button class="btn btn-primary">Sign In</button></a>
@@ -95,7 +95,7 @@ include '../includes/php/connect.php';
       <div class="center card bg-dark shadow rounded" style="width: 18rem;">
         <a href="/blog/posts/<?php echo $row['Title']; ?>.html"><img src="/includes/posts/images/<?php echo $row['Title']; ?>/image1.jpeg" class="card-img-top" alt="Your net slow lol"></a>
         <div class="card-body">
-          <h5 class="card-title"><?php echo $row['Title']; ?></h5>
+          <h5 class="card-title"><?php echo str_replace("_", " ", $row['Title']); ?></h5>
           <p class="card-text"><?php echo $row['small_content']; ?></p>
           <a href="/blog/posts/<?php echo $row['Title']; ?>.html" class="btn btn-primary">View Article</a>
         </div>

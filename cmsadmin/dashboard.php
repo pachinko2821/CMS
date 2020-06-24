@@ -39,19 +39,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="logout.php">Logout</a>
+          <a class="nav-link" href="logout.php"><button class="btn btn-primary">Logout</button></a>
           </li>
         </ul>
       </div>
@@ -120,7 +109,7 @@
                         <a href="#"><img class="card-img-top" src="/includes/posts/images/<?php echo $row['Title']; ?>/image1.jpeg"></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                            <a href="viewer.php?file=<?php echo $row['Profanity'].'-posts/'.$row['Title']; ?>.html"><?php echo $row['Title']; ?></a>
+                            <a href="viewer.php?file=<?php echo $row['Profanity'].'-posts/'.str_replace('_', ' ', $row['Title']); ?>.html"><?php echo $row['Title']; ?></a>
                             </h4>
                             <h5><?php echo $row['Author']; ?></h5>
                             <h6><?php echo $row['Date']; ?></h6>

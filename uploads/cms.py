@@ -160,7 +160,6 @@ def docx2html(docxfile, header, footer):
         html = result.value
 
     title = title[:-5] # removes '.docx' from name
-    title = title.replace("_", " ")
     
     os.mkdir(f"../includes/posts/images/{title}")
     docx2txt.process(docxfile, f"../includes/posts/images/{title}/") # extract and save images
