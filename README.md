@@ -8,3 +8,4 @@ To-Do:
 
 1. fix LFI
 2. add security to file upload
+3. update cuss words list in cms.py
