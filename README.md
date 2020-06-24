@@ -7,3 +7,4 @@ A Python-php-sqlite based CMS:
 To-Do:
 
 1. fix LFI
+2. add security to file upload
