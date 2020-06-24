@@ -16,8 +16,30 @@ include '../includes/php/connect.php';
 </head>
 <body class="bg-dark">
 
-<!-- include header -->
-<div w3-include-html="/includes/php/header.html"></div>
+<!-- navigation bar -->
+<nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark shadow-lg p-4 mb-4 rounded">
+    <a class="navbar-brand" href="/blog/index.php"><img src="/includes/img/small_logo.png" alt="The MGM Rant" class="logo"></a> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/blog/index.php">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/about.html">About Us </a>
+        </li>
+        <li>
+          <a class="nav-link" href="/blog/upload.php">Upload an Article</a>
+        </li>
+      </ul>
+      <a href="/cmsadmin/admin-login.php"><button class="btn btn-primary">Sign In</button></a>
+    </div>
+  </nav>  
+
+<!--navigation bar end-->
 
   <img class="center" src="/includes/img/logo.png" alt="The MGM Rant">
   <br><br>

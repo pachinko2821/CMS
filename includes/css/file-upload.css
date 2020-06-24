@@ -1,0 +1,14 @@
+.dropzone {
+    width: 80%;
+    height: 40%;
+    border: 0.3em dashed #ccc;
+    color: #ccc;
+    line-height: 300px;
+    text-align: center;
+    margin: auto;
+}
+
+.dropzone.dragover {
+    border: 0.3em dashed #1188bf;
+    color: #1188bf;
+}

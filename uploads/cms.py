@@ -177,7 +177,7 @@ def docx2html(docxfile, header, footer):
 
     #create a temp file, its gonna be difficult to read
     with open("temp_html", "w+") as html_file:
-        html_file.write(f"<!DOCTYPE html><head>{links}</head><body class='bg-dark'>") #add initial syntax and title
+        html_file.write(f"<!DOCTYPE html><html lang='en'><head>{links}</head><body class='bg-dark'>") #add initial syntax and title
         
         html_file.write(f"<div w3-include-html='/includes/php/header.html'></div><div>Author: {author}\nDate: {day}/{month}/{year}<div>") # add author and date
         
