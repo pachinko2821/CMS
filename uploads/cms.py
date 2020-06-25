@@ -53,7 +53,7 @@ cuss_words = ['aand', 'aandu', 'balatkar', 'beti chod', 'bhadva', 'bhadve', 'bha
               'shitters', 'shitting', 'shittings', 'shitty', 'skank', 'slut', 'sluts', 'smegma', 'smut', 'snatch', 'son-of-a-bitch', 'spac', 'spunk', 's_h_i_t', 't1tt1e5', 
               't1tties', 'teets', 'teez', 'testical', 'testicle', 'tit', 'titfuck', 'tits', 'titt', 'tittie5', 'tittiefucker', 'titties', 'tittyfuck', 'tittywank', 'titwank', 
               'tosser', 'turd', 'tw4t', 'twat', 'twathead', 'twatty', 'twunt', 'twunter', 'v14gra', 'v1gra', 'vagina', 'viagra', 'vulva', 'w00se', 'wang', 'wank', 'wanker', 
-              'wanky', 'whoar', 'whore', 'willies', 'willy', 'xrated']
+              'wanky', 'whoar', 'whore', 'willies', 'willy', 'xrated', '🖕']
 
 #list of found cuss words, gets updated as cuss words are found
 found_cuss_words = []
@@ -73,7 +73,7 @@ def check_profanity(docfile):
     else:
         exit()
     
-    small_content = content[:20]
+    small_content = content[:20] #this is for card text on the web page
     small_content = small_content.replace("\n", " ")
     small_content += "...."
 
@@ -83,7 +83,7 @@ def check_profanity(docfile):
             found_cuss_words.append(cuss) # appends found cuss words to the found_cuss_words list
             flag = 'red' # red if cuss words found 
         
-    fdetails = name.split("-")
+    fdetails = name.split("-") #in order to get date, author's name and title
     year, month, day = fdetails[0], fdetails[1], fdetails[2]
     Date = datetime.date(int(year), int(month), int(day))
     fdetails = [Date, fdetails[3], fdetails[4], small_content]
@@ -98,73 +98,6 @@ def show_cuss_words():
 
 
 ######################################--conversion functions--######################################    
-    
-'''
-
-#txt2html function converts the file from txt to html, also adds a header/footer
-def txt2html(txtfile, header, footer):
-    text = open(txtfile, "r") 
-    name = os.path.basename(text.name) # gets name of text file
-    
-    try:
-        year, month, day, author, title = name.split('-') # extracts date, author, and title from file name
-    except:
-        exit()
-    
-    title = title.strip(".txt") # remove '.txt' from title
-
-    content = text.read()
-    #add css links
-    links = '<meta charset="utf-8">'
-    links += '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'
-    links += '<meta name="description" content="">'
-    links += '<meta name="author" content="">'
-    links += f'<title>{title}</title>'
-    links += '<link href="/includes/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
-    links += '<link href="/includes/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">'
-    links += "<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>"
-    links += "<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>"
-    links += '<link href="/includes/css/clean-blog.min.css" rel="stylesheet">'
-
-
-    final_content = [] # this list will contain the contents to be added to the html file
-    final_content.append("<h1>"+header+"</h1>\n") # add header 
-    paragraphs = content.split('\n') # split paragraphs from the list
-    
-    for group in paragraphs:
-        final_content.append("<p>"+group+"</p>\n") # add paragraphs
-    
-    final_content.append("<h4>"+footer+"</h4>\n") # add footer
-
-    with open("temp_html","w+") as html_file: # create a temp html file, this is difficult to read
-        html_file.write(f"<!DOCTYPE html><html><head>{links}</head><body>") #add initial syntax and title
-        
-        html_file.write(f"<span>Author: {author}\nDate: {day}/{month}/{year}</span>") # add author and date
-        
-        for group in final_content:
-            html_file.write(group) # add article content
-
-        html_file.write("</html>")
-    
-    html_file.close()
-        
-    # beautify temp file contents and create actual temp file
-    with open("temp_html", "r") as html_file:
-        with open(f"{title}.html", "w+") as pretty_html_file:    
-            content = html_file.read()
-            soup = bs(content, 'html.parser')
-            content = soup.prettify()
-            pretty_html_file.write(content)
-
-        pretty_html_file.close()
-    
-    html_file.close()
-
-    os.remove("temp_html") # delete temp file
-    print(f"File converted and saved as {title}.html!")
-    
-'''
-
 
 #converts docx file to html
 def docx2html(docxfile, header, footer):
@@ -182,7 +115,7 @@ def docx2html(docxfile, header, footer):
 
     title = title[:-5] # removes '.docx' from name
     
-    os.mkdir(f"../includes/posts/images/{title}")
+    os.mkdir(f"../includes/posts/images/{title}") # makes a new dir to store images, for card image
     docx2txt.process(docxfile, f"../includes/posts/images/{title}/") # extract and save images
     
     #add css links
@@ -217,7 +150,7 @@ def docx2html(docxfile, header, footer):
 
     #delete the temp file
     os.remove("temp_html")
-    print(f"File converted and saved as {title}.html!")
+    #print(f"File converted and saved as {title}.html!")
     html_file.close()
 
 ######################################--End--######################################
