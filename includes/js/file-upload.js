@@ -14,7 +14,7 @@
             xhr.onload = function(){
                 var data = this.responseText;
                 console.log(data);
-                
+                alert("file uploaded") 
             }
 
             xhr.open('post', 'upload.php');
